@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+        "python.pythonPath": "D:/DFLbuild/python-3.6.8/python.exe",
+		"workbench.editor.tabCloseButton": "off",
+		"workbench.editor.tabSizing": "shrink",
+		"workbench.editor.highlightModifiedTabs": true,
+		"editor.mouseWheelScrollSensitivity": 3,
+		"editor.folding": false,
+		"editor.glyphMargin": false,
+		"files.exclude": {
+			"**/__pycache__": true,
+			"**/.github": true,
+			"**/.vscode": true,
+			"**/*.dat": true,
+			"**/*.h5": true
+		},
+		"editor.quickSuggestions": {
+			"other": false,
+			"comments": false,
+			"strings": false
+			},
+			"editor.trimAutoWhitespace": false
+	}
+}
