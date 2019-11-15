@@ -263,7 +263,7 @@ def reinhard_color_transfer(target, source, clip=False, preserve_paper=False, so
 	# return the color transferred image
 	return transfer
 
-def linear_color_transfer(target_img, source_img, mode='pca', eps=1e-5):
+def linear_color_transfer(target_img, source_img, mode='sym', eps=1e-6):
     '''
     Matches the colour distribution of the target image to that of the source image
     using a linear transform.
