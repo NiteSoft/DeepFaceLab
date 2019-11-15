@@ -239,6 +239,24 @@ class SampleProcessor(object):
 
                     ct_sample_bgr_resized = cv2.resize( ct_sample_bgr, (resolution,resolution), cv2.INTER_LINEAR )
 
+                    """
+                    ct_sample_bgr_resized = cv2.resize( ct_sample_bgr, (resolution,resolution), cv2.INTER_LINEAR )
+
+                    if ct_mode == 'lct':
+                        img_bgr = imagelib.linear_color_transfer (img_bgr, ct_sample_bgr_resized)
+                        img_bgr = np.clip( img_bgr, 0.0, 1.0)
+                    elif ct_mode == 'rct':
+                        img_bgr = imagelib.reinhard_color_transfer ( np.clip( (img_bgr*255).astype(np.uint8), 0, 255),
+                                                                     np.clip( (ct_sample_bgr_resized*255).astype(np.uint8), 0, 255) )
+                        img_bgr = np.clip( img_bgr.astype(np.float32) / 255.0, 0.0, 1.0)
+                    elif ct_mode == 'mkl':                    
+                        img_bgr = imagelib.color_transfer_mkl (img_bgr, ct_sample_bgr_resized)
+                    elif ct_mode == 'idt':
+                        img_bgr = imagelib.color_transfer_idt (img_bgr, ct_sample_bgr_resized)
+                    elif ct_mode == 'sot':
+                        img_bgr = imagelib.color_transfer_sot (img_bgr, ct_sample_bgr_resized)
+                        img_bgr = np.clip( img_bgr, 0.0, 1.0)
+                    """
                     img_bgr = imagelib.linear_color_transfer (img_bgr, ct_sample_bgr_resized)
                     img_bgr = np.clip( img_bgr, 0.0, 1.0)
 
