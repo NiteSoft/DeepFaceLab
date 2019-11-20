@@ -133,7 +133,7 @@ NLayerDiscriminator = nnlib.NLayerDiscriminator
         if 'CUDA_VISIBLE_DEVICES' in os.environ.keys():
             os.environ.pop('CUDA_VISIBLE_DEVICES')
 
-	os.environ['CUDA_?CACHE_?MAXSIZE'] = '536870912'
+	os.environ['CUDA_CACHE_MAXSIZE'] = '536870912'
 
         os.environ['TF_MIN_GPU_MULTIPROCESSOR_COUNT'] = '2'
         os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' #tf log errors only
