@@ -606,7 +606,7 @@ NLayerDiscriminator = nnlib.NLayerDiscriminator
             """
 
             def __init__(self, lr=0.001, beta_1=0.9, beta_2=0.999,
-                         epsilon=None, decay=0., amsgrad=False, tf_cpu_mode=0, **kwargs):
+                         epsilon=None, decay=0., amsgrad=True, tf_cpu_mode=0, **kwargs):
                 super(Adam, self).__init__(**kwargs)
                 with K.name_scope(self.__class__.__name__):
                     self.iterations = K.variable(0, dtype='int64', name='iterations')
